@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual 3D</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="landing">
+    <div class="diagonal-container">
+      <!-- Panel izquierdo: información -->
+      <div class="panel-left">
+        <div class="content">
+          <h1>
+            Bienvenido/a, te enseño mi
+            <span id="changing-word">Portfolio</span>
+          </h1>
+          <p>Explora mis proyectos, láminas e impresiones 3D con estilo único.</p>
+          <button id="viewWorks">Mis trabajos</button>
+        </div>
+        <div class="social-icons">
+          <a href="https://api.whatsapp.com/send?phone=34640660501&text=¡Hola!%20me%20interesa%20un%20producto"
+            class="whatsapp" target="_blank" data-tooltip="Escríbeme en WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/artema.3d" class="instagram" target="_blank"
+            data-tooltip="Sígueme en Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://es.wallapop.com/user/aitorb-44165286" class="wallapop" target="_blank"
+            data-tooltip="Compra mis productos en Wallapop">
+            <i class="fas fa-basket-shopping"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Panel derecho: imagen visual -->
+      <div class="panel-right">
+        <div class="image-bg"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Galería de trabajos -->
+  <section id="gallery" class="gallery">
+    <div class="gallery-grid">
+      <picture>
+        <source srcset="thumb/proyecto (1).avif" type="image/avif">
+        <source srcset="thumb/proyecto (1).webp" type="image/webp">
+        <img src="thumb/proyecto (1).jpg" alt="Proyecto 1" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (1).avif" data-full-webp="webp/proyecto (1).webp"
+          data-full-jpg="img/proyecto (1).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (2).avif" type="image/avif">
+        <source srcset="thumb/proyecto (2).webp" type="image/webp">
+        <img src="thumb/proyecto (2).jpg" alt="Proyecto 2" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (2).avif" data-full-webp="webp/proyecto (2).webp"
+          data-full-jpg="img/proyecto (2).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (3).avif" type="image/avif">
+        <source srcset="thumb/proyecto (3).webp" type="image/webp">
+        <img src="thumb/proyecto (3).jpg" alt="Proyecto 3" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (3).avif" data-full-webp="webp/proyecto (3).webp"
+          data-full-jpg="img/proyecto (3).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (4).avif" type="image/avif">
+        <source srcset="thumb/proyecto (4).webp" type="image/webp">
+        <img src="thumb/proyecto (4).jpg" alt="Proyecto 4" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (4).avif" data-full-webp="webp/proyecto (4).webp"
+          data-full-jpg="img/proyecto (4).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (5).avif" type="image/avif">
+        <source srcset="thumb/proyecto (5).webp" type="image/webp">
+        <img src="thumb/proyecto (5).jpg" alt="Proyecto 5" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (5).avif" data-full-webp="webp/proyecto (5).webp"
+          data-full-jpg="img/proyecto (5).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (6).avif" type="image/avif">
+        <source srcset="thumb/proyecto (6).webp" type="image/webp">
+        <img src="thumb/proyecto (6).jpg" alt="Proyecto 6" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (6).avif" data-full-webp="webp/proyecto (6).webp"
+          data-full-jpg="img/proyecto (6).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (7).avif" type="image/avif">
+        <source srcset="thumb/proyecto (7).webp" type="image/webp">
+        <img src="thumb/proyecto (7).jpg" alt="Proyecto 7" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (7).avif" data-full-webp="webp/proyecto (7).webp"
+          data-full-jpg="img/proyecto (7).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (8).avif" type="image/avif">
+        <source srcset="thumb/proyecto (8).webp" type="image/webp">
+        <img src="thumb/proyecto (8).jpg" alt="Proyecto 8" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (8).avif" data-full-webp="webp/proyecto (8).webp"
+          data-full-jpg="img/proyecto (8).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (9).avif" type="image/avif">
+        <source srcset="thumb/proyecto (9).webp" type="image/webp">
+        <img src="thumb/proyecto (9).jpg" alt="Proyecto 9" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (9).avif" data-full-webp="webp/proyecto (9).webp"
+          data-full-jpg="img/proyecto (9).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (10).avif" type="image/avif">
+        <source srcset="thumb/proyecto (10).webp" type="image/webp">
+        <img src="thumb/proyecto (10).jpg" alt="Proyecto 10" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (10).avif" data-full-webp="webp/proyecto (10).webp"
+          data-full-jpg="img/proyecto (10).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (11).avif" type="image/avif">
+        <source srcset="thumb/proyecto (11).webp" type="image/webp">
+        <img src="thumb/proyecto (11).jpg" alt="Proyecto 11" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (11).avif" data-full-webp="webp/proyecto (11).webp"
+          data-full-jpg="img/proyecto (11).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (12).avif" type="image/avif">
+        <source srcset="thumb/proyecto (12).webp" type="image/webp">
+        <img src="thumb/proyecto (12).jpg" alt="Proyecto 12" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (12).avif" data-full-webp="webp/proyecto (12).webp"
+          data-full-jpg="img/proyecto (12).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (13).avif" type="image/avif">
+        <source srcset="thumb/proyecto (13).webp" type="image/webp">
+        <img src="thumb/proyecto (13).jpg" alt="Proyecto 13" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (13).avif" data-full-webp="webp/proyecto (13).webp"
+          data-full-jpg="img/proyecto (13).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (14).avif" type="image/avif">
+        <source srcset="thumb/proyecto (14).webp" type="image/webp">
+        <img src="thumb/proyecto (14).jpg" alt="Proyecto 14" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (14).avif" data-full-webp="webp/proyecto (14).webp"
+          data-full-jpg="img/proyecto (14).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (15).avif" type="image/avif">
+        <source srcset="thumb/proyecto (15).webp" type="image/webp">
+        <img src="thumb/proyecto (15).jpg" alt="Proyecto 15" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (15).avif" data-full-webp="webp/proyecto (15).webp"
+          data-full-jpg="img/proyecto (15).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (16).avif" type="image/avif">
+        <source srcset="thumb/proyecto (16).webp" type="image/webp">
+        <img src="thumb/proyecto (16).jpg" alt="Proyecto 16" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (16).avif" data-full-webp="webp/proyecto (16).webp"
+          data-full-jpg="img/proyecto (16).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (17).avif" type="image/avif">
+        <source srcset="thumb/proyecto (17).webp" type="image/webp">
+        <img src="thumb/proyecto (17).jpg" alt="Proyecto 17" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (17).avif" data-full-webp="webp/proyecto (17).webp"
+          data-full-jpg="img/proyecto (17).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (18).avif" type="image/avif">
+        <source srcset="thumb/proyecto (18).webp" type="image/webp">
+        <img src="thumb/proyecto (18).jpg" alt="Proyecto 18" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (18).avif" data-full-webp="webp/proyecto (18).webp"
+          data-full-jpg="img/proyecto (18).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (19).avif" type="image/avif">
+        <source srcset="thumb/proyecto (19).webp" type="image/webp">
+        <img src="thumb/proyecto (19).jpg" alt="Proyecto 19" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (19).avif" data-full-webp="webp/proyecto (19).webp"
+          data-full-jpg="img/proyecto (19).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (20).avif" type="image/avif">
+        <source srcset="thumb/proyecto (20).webp" type="image/webp">
+        <img src="thumb/proyecto (20).jpg" alt="Proyecto 20" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (20).avif" data-full-webp="webp/proyecto (20).webp"
+          data-full-jpg="img/proyecto (20).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (21).avif" type="image/avif">
+        <source srcset="thumb/proyecto (21).webp" type="image/webp">
+        <img src="thumb/proyecto (21).jpg" alt="Proyecto 21" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (21).avif" data-full-webp="webp/proyecto (21).webp"
+          data-full-jpg="img/proyecto (21).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (22).avif" type="image/avif">
+        <source srcset="thumb/proyecto (22).webp" type="image/webp">
+        <img src="thumb/proyecto (22).jpg" alt="Proyecto 22" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (22).avif" data-full-webp="webp/proyecto (22).webp"
+          data-full-jpg="img/proyecto (22).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (23).avif" type="image/avif">
+        <source srcset="thumb/proyecto (23).webp" type="image/webp">
+        <img src="thumb/proyecto (23).jpg" alt="Proyecto 23" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (23).avif" data-full-webp="webp/proyecto (23).webp"
+          data-full-jpg="img/proyecto (23).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (24).avif" type="image/avif">
+        <source srcset="thumb/proyecto (24).webp" type="image/webp">
+        <img src="thumb/proyecto (24).jpg" alt="Proyecto 24" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (24).avif" data-full-webp="webp/proyecto (24).webp"
+          data-full-jpg="img/proyecto (24).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (25).avif" type="image/avif">
+        <source srcset="thumb/proyecto (25).webp" type="image/webp">
+        <img src="thumb/proyecto (25).jpg" alt="Proyecto 25" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (25).avif" data-full-webp="webp/proyecto (25).webp"
+          data-full-jpg="img/proyecto (25).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (26).avif" type="image/avif">
+        <source srcset="thumb/proyecto (26).webp" type="image/webp">
+        <img src="thumb/proyecto (26).jpg" alt="Proyecto 26" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (26).avif" data-full-webp="webp/proyecto (26).webp"
+          data-full-jpg="img/proyecto (26).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (27).avif" type="image/avif">
+        <source srcset="thumb/proyecto (27).webp" type="image/webp">
+        <img src="thumb/proyecto (27).jpg" alt="Proyecto 27" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (27).avif" data-full-webp="webp/proyecto (27).webp"
+          data-full-jpg="img/proyecto (27).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (28).avif" type="image/avif">
+        <source srcset="thumb/proyecto (28).webp" type="image/webp">
+        <img src="thumb/proyecto (28).jpg" alt="Proyecto 28" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (28).avif" data-full-webp="webp/proyecto (28).webp"
+          data-full-jpg="img/proyecto (28).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (29).avif" type="image/avif">
+        <source srcset="thumb/proyecto (29).webp" type="image/webp">
+        <img src="thumb/proyecto (29).jpg" alt="Proyecto 29" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (29).avif" data-full-webp="webp/proyecto (29).webp"
+          data-full-jpg="img/proyecto (29).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (30).avif" type="image/avif">
+        <source srcset="thumb/proyecto (30).webp" type="image/webp">
+        <img src="thumb/proyecto (30).jpg" alt="Proyecto 30" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (30).avif" data-full-webp="webp/proyecto (30).webp"
+          data-full-jpg="img/proyecto (30).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (31).avif" type="image/avif">
+        <source srcset="thumb/proyecto (31).webp" type="image/webp">
+        <img src="thumb/proyecto (31).jpg" alt="Proyecto 31" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (31).avif" data-full-webp="webp/proyecto (31).webp"
+          data-full-jpg="img/proyecto (31).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (32).avif" type="image/avif">
+        <source srcset="thumb/proyecto (32).webp" type="image/webp">
+        <img src="thumb/proyecto (32).jpg" alt="Proyecto 32" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (32).avif" data-full-webp="webp/proyecto (32).webp"
+          data-full-jpg="img/proyecto (32).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (33).avif" type="image/avif">
+        <source srcset="thumb/proyecto (33).webp" type="image/webp">
+        <img src="thumb/proyecto (33).jpg" alt="Proyecto 33" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (33).avif" data-full-webp="webp/proyecto (33).webp"
+          data-full-jpg="img/proyecto (33).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (34).avif" type="image/avif">
+        <source srcset="thumb/proyecto (34).webp" type="image/webp">
+        <img src="thumb/proyecto (34).jpg" alt="Proyecto 34" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (34).avif" data-full-webp="webp/proyecto (34).webp"
+          data-full-jpg="img/proyecto (34).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (35).avif" type="image/avif">
+        <source srcset="thumb/proyecto (35).webp" type="image/webp">
+        <img src="thumb/proyecto (35).jpg" alt="Proyecto 35" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (35).avif" data-full-webp="webp/proyecto (35).webp"
+          data-full-jpg="img/proyecto (35).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (36).avif" type="image/avif">
+        <source srcset="thumb/proyecto (36).webp" type="image/webp">
+        <img src="thumb/proyecto (36).jpg" alt="Proyecto 36" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (36).avif" data-full-webp="webp/proyecto (36).webp"
+          data-full-jpg="img/proyecto (36).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (37).avif" type="image/avif">
+        <source srcset="thumb/proyecto (37).webp" type="image/webp">
+        <img src="thumb/proyecto (37).jpg" alt="Proyecto 37" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (37).avif" data-full-webp="webp/proyecto (37).webp"
+          data-full-jpg="img/proyecto (37).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (38).avif" type="image/avif">
+        <source srcset="thumb/proyecto (38).webp" type="image/webp">
+        <img src="thumb/proyecto (38).jpg" alt="Proyecto 38" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (38).avif" data-full-webp="webp/proyecto (38).webp"
+          data-full-jpg="img/proyecto (38).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (39).avif" type="image/avif">
+        <source srcset="thumb/proyecto (39).webp" type="image/webp">
+        <img src="thumb/proyecto (39).jpg" alt="Proyecto 39" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (39).avif" data-full-webp="webp/proyecto (39).webp"
+          data-full-jpg="img/proyecto (39).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (40).avif" type="image/avif">
+        <source srcset="thumb/proyecto (40).webp" type="image/webp">
+        <img src="thumb/proyecto (40).jpg" alt="Proyecto 40" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (40).avif" data-full-webp="webp/proyecto (40).webp"
+          data-full-jpg="img/proyecto (40).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (41).avif" type="image/avif">
+        <source srcset="thumb/proyecto (41).webp" type="image/webp">
+        <img src="thumb/proyecto (41).jpg" alt="Proyecto 41" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (41).avif" data-full-webp="webp/proyecto (41).webp"
+          data-full-jpg="img/proyecto (41).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (42).avif" type="image/avif">
+        <source srcset="thumb/proyecto (42).webp" type="image/webp">
+        <img src="thumb/proyecto (42).jpg" alt="Proyecto 42" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (42).avif" data-full-webp="webp/proyecto (42).webp"
+          data-full-jpg="img/proyecto (42).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (43).avif" type="image/avif">
+        <source srcset="thumb/proyecto (43).webp" type="image/webp">
+        <img src="thumb/proyecto (43).jpg" alt="Proyecto 43" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (43).avif" data-full-webp="webp/proyecto (43).webp"
+          data-full-jpg="img/proyecto (43).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (44).avif" type="image/avif">
+        <source srcset="thumb/proyecto (44).webp" type="image/webp">
+        <img src="thumb/proyecto (44).jpg" alt="Proyecto 44" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (44).avif" data-full-webp="webp/proyecto (44).webp"
+          data-full-jpg="img/proyecto (44).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (45).avif" type="image/avif">
+        <source srcset="thumb/proyecto (45).webp" type="image/webp">
+        <img src="thumb/proyecto (45).jpg" alt="Proyecto 45" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (45).avif" data-full-webp="webp/proyecto (45).webp"
+          data-full-jpg="img/proyecto (45).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (46).avif" type="image/avif">
+        <source srcset="thumb/proyecto (46).webp" type="image/webp">
+        <img src="thumb/proyecto (46).jpg" alt="Proyecto 46" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (46).avif" data-full-webp="webp/proyecto (46).webp"
+          data-full-jpg="img/proyecto (46).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (47).avif" type="image/avif">
+        <source srcset="thumb/proyecto (47).webp" type="image/webp">
+        <img src="thumb/proyecto (47).jpg" alt="Proyecto 47" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (47).avif" data-full-webp="webp/proyecto (47).webp"
+          data-full-jpg="img/proyecto (47).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (48).avif" type="image/avif">
+        <source srcset="thumb/proyecto (48).webp" type="image/webp">
+        <img src="thumb/proyecto (48).jpg" alt="Proyecto 48" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (48).avif" data-full-webp="webp/proyecto (48).webp"
+          data-full-jpg="img/proyecto (48).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (49).avif" type="image/avif">
+        <source srcset="thumb/proyecto (49).webp" type="image/webp">
+        <img src="thumb/proyecto (49).jpg" alt="Proyecto 49" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (49).avif" data-full-webp="webp/proyecto (49).webp"
+          data-full-jpg="img/proyecto (49).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (50).avif" type="image/avif">
+        <source srcset="thumb/proyecto (50).webp" type="image/webp">
+        <img src="thumb/proyecto (50).jpg" alt="Proyecto 50" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (50).avif" data-full-webp="webp/proyecto (50).webp"
+          data-full-jpg="img/proyecto (50).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (51).avif" type="image/avif">
+        <source srcset="thumb/proyecto (51).webp" type="image/webp">
+        <img src="thumb/proyecto (51).jpg" alt="Proyecto 51" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (51).avif" data-full-webp="webp/proyecto (51).webp"
+          data-full-jpg="img/proyecto (51).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (52).avif" type="image/avif">
+        <source srcset="thumb/proyecto (52).webp" type="image/webp">
+        <img src="thumb/proyecto (52).jpg" alt="Proyecto 52" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (52).avif" data-full-webp="webp/proyecto (52).webp"
+          data-full-jpg="img/proyecto (52).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (53).avif" type="image/avif">
+        <source srcset="thumb/proyecto (53).webp" type="image/webp">
+        <img src="thumb/proyecto (53).jpg" alt="Proyecto 53" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (53).avif" data-full-webp="webp/proyecto (53).webp"
+          data-full-jpg="img/proyecto (53).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (54).avif" type="image/avif">
+        <source srcset="thumb/proyecto (54).webp" type="image/webp">
+        <img src="thumb/proyecto (54).jpg" alt="Proyecto 54" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (54).avif" data-full-webp="webp/proyecto (54).webp"
+          data-full-jpg="img/proyecto (54).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (55).avif" type="image/avif">
+        <source srcset="thumb/proyecto (55).webp" type="image/webp">
+        <img src="thumb/proyecto (55).jpg" alt="Proyecto 55" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (55).avif" data-full-webp="webp/proyecto (55).webp"
+          data-full-jpg="img/proyecto (55).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (56).avif" type="image/avif">
+        <source srcset="thumb/proyecto (56).webp" type="image/webp">
+        <img src="thumb/proyecto (56).jpg" alt="Proyecto 56" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (56).avif" data-full-webp="webp/proyecto (56).webp"
+          data-full-jpg="img/proyecto (56).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (57).avif" type="image/avif">
+        <source srcset="thumb/proyecto (57).webp" type="image/webp">
+        <img src="thumb/proyecto (57).jpg" alt="Proyecto 57" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (57).avif" data-full-webp="webp/proyecto (57).webp"
+          data-full-jpg="img/proyecto (57).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (58).avif" type="image/avif">
+        <source srcset="thumb/proyecto (58).webp" type="image/webp">
+        <img src="thumb/proyecto (58).jpg" alt="Proyecto 58" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (58).avif" data-full-webp="webp/proyecto (58).webp"
+          data-full-jpg="img/proyecto (58).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (59).avif" type="image/avif">
+        <source srcset="thumb/proyecto (59).webp" type="image/webp">
+        <img src="thumb/proyecto (59).jpg" alt="Proyecto 59" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (59).avif" data-full-webp="webp/proyecto (59).webp"
+          data-full-jpg="img/proyecto (59).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (60).avif" type="image/avif">
+        <source srcset="thumb/proyecto (60).webp" type="image/webp">
+        <img src="thumb/proyecto (60).jpg" alt="Proyecto 60" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (60).avif" data-full-webp="webp/proyecto (60).webp"
+          data-full-jpg="img/proyecto (60).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (61).avif" type="image/avif">
+        <source srcset="thumb/proyecto (61).webp" type="image/webp">
+        <img src="thumb/proyecto (61).jpg" alt="Proyecto 61" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (61).avif" data-full-webp="webp/proyecto (61).webp"
+          data-full-jpg="img/proyecto (61).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (62).avif" type="image/avif">
+        <source srcset="thumb/proyecto (62).webp" type="image/webp">
+        <img src="thumb/proyecto (62).jpg" alt="Proyecto 62" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (62).avif" data-full-webp="webp/proyecto (62).webp"
+          data-full-jpg="img/proyecto (62).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (63).avif" type="image/avif">
+        <source srcset="thumb/proyecto (63).webp" type="image/webp">
+        <img src="thumb/proyecto (63).jpg" alt="Proyecto 63" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (63).avif" data-full-webp="webp/proyecto (63).webp"
+          data-full-jpg="img/proyecto (63).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (64).avif" type="image/avif">
+        <source srcset="thumb/proyecto (64).webp" type="image/webp">
+        <img src="thumb/proyecto (64).jpg" alt="Proyecto 64" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (64).avif" data-full-webp="webp/proyecto (64).webp"
+          data-full-jpg="img/proyecto (64).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (65).avif" type="image/avif">
+        <source srcset="thumb/proyecto (65).webp" type="image/webp">
+        <img src="thumb/proyecto (65).jpg" alt="Proyecto 65" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (65).avif" data-full-webp="webp/proyecto (65).webp"
+          data-full-jpg="img/proyecto (65).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (66).avif" type="image/avif">
+        <source srcset="thumb/proyecto (66).webp" type="image/webp">
+        <img src="thumb/proyecto (66).jpg" alt="Proyecto 66" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (66).avif" data-full-webp="webp/proyecto (66).webp"
+          data-full-jpg="img/proyecto (66).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (67).avif" type="image/avif">
+        <source srcset="thumb/proyecto (67).webp" type="image/webp">
+        <img src="thumb/proyecto (67).jpg" alt="Proyecto 67" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (67).avif" data-full-webp="webp/proyecto (67).webp"
+          data-full-jpg="img/proyecto (67).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (68).avif" type="image/avif">
+        <source srcset="thumb/proyecto (68).webp" type="image/webp">
+        <img src="thumb/proyecto (68).jpg" alt="Proyecto 68" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (68).avif" data-full-webp="webp/proyecto (68).webp"
+          data-full-jpg="img/proyecto (68).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (69).avif" type="image/avif">
+        <source srcset="thumb/proyecto (69).webp" type="image/webp">
+        <img src="thumb/proyecto (69).jpg" alt="Proyecto 69" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (69).avif" data-full-webp="webp/proyecto (69).webp"
+          data-full-jpg="img/proyecto (69).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (70).avif" type="image/avif">
+        <source srcset="thumb/proyecto (70).webp" type="image/webp">
+        <img src="thumb/proyecto (70).jpg" alt="Proyecto 70" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (70).avif" data-full-webp="webp/proyecto (70).webp"
+          data-full-jpg="img/proyecto (70).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (71).avif" type="image/avif">
+        <source srcset="thumb/proyecto (71).webp" type="image/webp">
+        <img src="thumb/proyecto (71).jpg" alt="Proyecto 71" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (71).avif" data-full-webp="webp/proyecto (71).webp"
+          data-full-jpg="img/proyecto (71).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (72).avif" type="image/avif">
+        <source srcset="thumb/proyecto (72).webp" type="image/webp">
+        <img src="thumb/proyecto (72).jpg" alt="Proyecto 72" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (72).avif" data-full-webp="webp/proyecto (72).webp"
+          data-full-jpg="img/proyecto (72).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (73).avif" type="image/avif">
+        <source srcset="thumb/proyecto (73).webp" type="image/webp">
+        <img src="thumb/proyecto (73).jpg" alt="Proyecto 73" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (73).avif" data-full-webp="webp/proyecto (73).webp"
+          data-full-jpg="img/proyecto (73).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (74).avif" type="image/avif">
+        <source srcset="thumb/proyecto (74).webp" type="image/webp">
+        <img src="thumb/proyecto (74).jpg" alt="Proyecto 74" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (74).avif" data-full-webp="webp/proyecto (74).webp"
+          data-full-jpg="img/proyecto (74).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (75).avif" type="image/avif">
+        <source srcset="thumb/proyecto (75).webp" type="image/webp">
+        <img src="thumb/proyecto (75).jpg" alt="Proyecto 75" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (75).avif" data-full-webp="webp/proyecto (75).webp"
+          data-full-jpg="img/proyecto (75).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (76).avif" type="image/avif">
+        <source srcset="thumb/proyecto (76).webp" type="image/webp">
+        <img src="thumb/proyecto (76).jpg" alt="Proyecto 76" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (76).avif" data-full-webp="webp/proyecto (76).webp"
+          data-full-jpg="img/proyecto (76).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (77).avif" type="image/avif">
+        <source srcset="thumb/proyecto (77).webp" type="image/webp">
+        <img src="thumb/proyecto (77).jpg" alt="Proyecto 77" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (77).avif" data-full-webp="webp/proyecto (77).webp"
+          data-full-jpg="img/proyecto (77).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (78).avif" type="image/avif">
+        <source srcset="thumb/proyecto (78).webp" type="image/webp">
+        <img src="thumb/proyecto (78).jpg" alt="Proyecto 78" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (78).avif" data-full-webp="webp/proyecto (78).webp"
+          data-full-jpg="img/proyecto (78).jpg">
+      </picture>
+      <picture>
+        <source srcset="thumb/proyecto (79).avif" type="image/avif">
+        <source srcset="thumb/proyecto (79).webp" type="image/webp">
+        <img src="thumb/proyecto (79).jpg" alt="Proyecto 79" class="gallery-item" loading="lazy"
+          data-full-avif="avif/proyecto (79).avif" data-full-webp="webp/proyecto (79).webp"
+          data-full-jpg="img/proyecto (79).jpg">
+      </picture>
+    </div>
+  </section>
+
+  <!-- Modal para ampliar imagen -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
