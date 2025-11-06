@@ -26,6 +26,7 @@ panelRight.addEventListener('mouseleave', () => {
   panelRight.querySelector('.image-bg').style.transform =
     `rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1) skew(0deg,0deg)`;
 });
+
 // Modal para ampliar imagen
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
@@ -44,6 +45,42 @@ document.querySelectorAll(".gallery picture").forEach(picture => {
     modalImg.src = fullSrc;
     modalImg.alt = img.alt;
   });
+  // === FLECHAS PARA NAVEGAR IMÁGENES ===
+
+// Obtener flechas
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+// Crear lista de elementos de la galería
+let galleryItems = [...document.querySelectorAll(".gallery picture")];
+let currentIndex = 0;
+
+// Cuando se abre una imagen, guardamos el índice
+galleryItems.forEach((picture, index) => {
+  picture.addEventListener("click", () => {
+    currentIndex = index;
+  });
+});
+
+// Función para actualizar la imagen grande
+function openImage() {
+  const img = galleryItems[currentIndex].querySelector("img");
+  let fullSrc = img.dataset.fullAvif || img.dataset.fullWebp || img.dataset.fullJpg;
+  modalImg.src = fullSrc;
+  modalImg.alt = img.alt;
+}
+
+// Flecha izquierda
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  openImage();
+});
+
+// Flecha derecha
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  openImage();
+});
 });
 
 // Observer para animar la galería al hacer scroll
